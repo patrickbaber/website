@@ -1,0 +1,4 @@
+version: "2"
+services:
+  nginx:
+    image: nginx:1.11-alpine
