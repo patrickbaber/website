@@ -14,3 +14,9 @@ docker exec mywebsite nginx -t
 echo "Pushing image to registry ..."
 docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD
 docker push patrickbaber/website
+
+#docker service create \
+#  --replicas 3 \
+#  --name patrickbaber_website \
+#  --update-delay 10s \
+#  patrickbaber/website

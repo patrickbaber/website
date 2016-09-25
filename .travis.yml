@@ -1,5 +1,8 @@
 services:
   - docker
 
+addons:
+  ssh_known_hosts: $SWARM_MANAGER
+
 script:
   - ./build.sh
