@@ -10,3 +10,7 @@ docker ps | grep mywebsite
 
 echo "Checking nginx config syntax ..."
 docker exec mywebsite nginx -t
+
+echo "Pushing image to registry ..."
+docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD
+docker push patrickbaber/website
