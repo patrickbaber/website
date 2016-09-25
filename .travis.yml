@@ -6,3 +6,7 @@ addons:
 
 script:
   - ./build.sh
+
+#deploy:
+#  provider: script
+#  script: ssh $SWARM_USER@$SWARM_MANAGER
