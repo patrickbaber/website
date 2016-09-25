@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
     <style>
-        html {
+        html, body {
             font-size: 16px;
+            height: 100%;
         }
         body {
             font-family: "Raleway", sans-serif;
@@ -19,16 +20,21 @@
             margin: 0;
         }
         .container {
-            text-align:center;
-            display: table;
-            width: 100vw;
-            height: 100vh;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        main {
-            display: table-cell;
-            vertical-align: middle;
-            height: auto;
-            padding: 4rem;
+        .row {
+            width: auto;
+            padding: 5rem;
+            text-align: center;
         }
         a {
             color: #fff;
@@ -71,10 +77,12 @@
 </head>
 <body>
     <div class="container">
-        <main>
+        <div class="row">
+        <!-- <main> -->
             <h1>Hallo, ich bin Patrick Baber.</h1>
             <h2>Ich entwickle <strong>digitales Zeug</strong> und bin Teil von <a href="https://www.ueberdosis.io" target="_blank">überdosis</a> und <a href="https://www.servivum.com" target="_blank">Servivum</a>.</h2>
-        </main>
+        <!-- </main> -->
+        </div>
     </div>
 </body>
 </html>
