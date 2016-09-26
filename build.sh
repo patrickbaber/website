@@ -6,7 +6,9 @@ if [ -z "$TRAVIS_BUILD_NUMBER" ]; then
 fi
 
 echo "Building and running image ..."
-docker build -t patrickbaber/website:build-$TRAVIS_BUILD_NUMBER .
+docker build \
+-t patrickbaber/website:build-$TRAVIS_BUILD_NUMBER \
+-t patrickbaber/website:latest .
 docker run -d -P --name mywebsite patrickbaber/website:build-$TRAVIS_BUILD_NUMBER
 
 echo "Checking if container is running ..."
