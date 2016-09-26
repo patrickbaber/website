@@ -1,0 +1,166 @@
+html, body {
+    font-size: 16px;
+    height: 100%;
+}
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    background: url("../img/background.jpg") #fff no-repeat 45% 47%;
+    background-size: cover;
+    margin: 0;
+}
+.container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    width: auto;
+    padding: 5rem;
+    text-align: center;
+    flex: 1 0 auto;
+    -ms-flex-preferred-size: auto;
+    align-items: center;
+    /*justify-content: center;*/
+    overflow-y: auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+.footer {
+    flex: none;
+    padding: 1.5rem;
+}
+.footer address {
+    font-style: normal;
+    text-align: center;
+}
+.social {
+    padding: 4rem 0 0;
+}
+.social a {
+    color: #fff;
+    display: inline-block;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+    vertical-align: middle;
+}
+.social a:focus,
+.social a:hover,
+.social a:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+.social svg {
+    fill: currentColor;
+    max-height: 2.2rem;
+    width: 2rem;
+}
+.social .mail {
+    width: 2.2rem;
+}
+.social .xing {
+    width: 1.9rem;
+}
+.social .xing {
+    width: 1.7rem;
+}
+h2 a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 3px rgba(255, 255, 255, 0.3) solid;
+    transition: border 0.3s ease-in-out;
+}
+a:hover {
+    color:#fff;
+    border-color: rgba(255, 255, 255, 1);
+}
+a:active {
+    color:#fff;
+}
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.only-mobile {
+    display: none;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+strong {
+    font-weight: 700;
+}
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 7vw;
+    }
+    h2 {
+        font-size: 3vw;
+        line-height: 1.2;
+    }
+    footer {
+        font-size: 1.5vw;
+    }
+    h2 .only-mobile {
+        display: block;
+    }
+}
+@media (max-width: 900px) {
+    .content {
+        padding: 2rem;
+    }
+    h1 {
+        font-size: 9vw;
+        line-height: 1;
+    }
+    h2 {
+        font-size: 4vw;
+    }
+    footer {
+        font-size: 2.5vw;
+    }
+    h1 .only-mobile, h2 .only-mobile {
+        display: block;
+    }
+    h2 .only-mobile {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .content {
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 10vw;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    footer {
+        font-size: 3vw;
+    }
+    h2 .only-mobile {
+        display: none;
+    }
+    footer .only-mobile {
+        display: block;
+    }
+}
