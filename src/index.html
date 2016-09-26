@@ -31,15 +31,32 @@
             display: -ms-flexbox;
             display: -webkit-flex;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
-        .row {
+        .content {
             width: auto;
             padding: 5rem;
             text-align: center;
+            flex: 1 0 auto;
+            -ms-flex-preferred-size: auto;
+            align-items: center;
+            justify-content: center;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: flex;
         }
-        a {
+        .footer {
+            flex: none;
+            padding: 1.5rem;
+        }
+        .footer address {
+            font-style: normal;
+            text-align: center;
+        }
+        h2 a {
             color: #fff;
             text-decoration: none;
             border-bottom: 3px rgba(255, 255, 255, 0.3) solid;
@@ -59,31 +76,85 @@
         h1 {
             font-size: 5rem;
             font-weight: 500;
-            line-height: 5rem;
+            line-height: 1.1;
+        }
+        .only-mobile {
+            display: none;
         }
         h2 {
-            font-size: 1.625rem;
+            font-size: 2rem;
             font-weight: 400;
-            line-height: 2rem;
+            line-height: 1.1;
         }
         strong {
             font-weight: 700;
         }
-        ul {
-            display: inline;
-            list-style-type: none;
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 7vw;
+            }
+            h2 {
+                font-size: 3vw;
+                line-height: 1.2;
+            }
+            footer {
+                font-size: 1.5vw;
+            }
+            h2 .only-mobile {
+                display: block;
+            }
         }
-        ul li {
-            display: inline;
+        @media (max-width: 900px) {
+            .content {
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 9vw;
+                line-height: 1;
+            }
+            h2 {
+                font-size: 4vw;
+            }
+            footer {
+                font-size: 2.5vw;
+            }
+            h1 .only-mobile, h2 .only-mobile {
+                display: block;
+            }
+            h2 .only-mobile {
+                display: none;
+            }
+        }
+        @media (max-width: 600px) {
+            .content {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 10vw;
+            }
+            h2 {
+                font-size: 5vw;
+            }
+            footer {
+                font-size: 3vw;
+            }
+            h2 .only-mobile {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <h1>Hallo, ich bin Patrick.</h1>
-            <h2>Ich entwickle <strong>digitales Zeug</strong> und bin Teil von <a href="https://www.ueberdosis.io" target="_blank">überdosis</a> und <a href="https://www.servivum.com" target="_blank">Servivum</a>.</h2>
+        <div class="content">
+            <div class="content-inner">
+                <h1>Hallo, <br class="only-mobile">ich bin Patrick.</h1>
+                <h2>Ich entwickle <strong>digitales Zeug</strong> <br class="only-mobile">und bin Teil von <a href="https://www.ueberdosis.io" target="_blank">überdosis</a> und <a href="https://www.servivum.com" target="_blank">Servivum</a>.</h2>
+            </div>
         </div>
+        <footer class="footer">
+            <address>Patrick Baber, c/o überdosis, <br class="only-mobile">Kurfürstenstraße 56, 10785 Berlin</address>
+        </footer>
     </div>
 </body>
 </html>
