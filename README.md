@@ -2,6 +2,6 @@
 
 # My Own Website
 
-Just my own Website. Build with Docker. Delivered with Travis CI.
+Just my own website. Build with Docker. Delivered with Travis CI.
 
 URL: http://www.patrickbaber.de
