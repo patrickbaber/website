@@ -9,4 +9,5 @@ COPY src /usr/share/nginx/html
 RUN apk add --update curl && \
     rm -rf /var/cache/apk/*
 
-#HEALTHCHECK CMD curl --fail http://localhost/ || exit 1
+# Add check to verify container state
+HEALTHCHECK CMD curl --fail http://localhost/ || exit 1
