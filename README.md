@@ -2,6 +2,14 @@
 
 # My Own Website
 
-Just my own website. Build with Docker. Delivered with Travis CI.
+Just my own website. Build with Docker. Delivered with [Travis CI](https://travis-ci.org/patrickbaber/website) and 
+[Docker Hub](https://hub.docker.com/r/patrickbaber/website/). Running in production with Docker Swarm Mode.
 
 URL: http://www.patrickbaber.de
+
+## Overview
+
+A `git push` to this GitHub repository triggers [Travis CI](https://travis-ci.org/patrickbaber/website) to clone the 
+repository. The CI/CD machine builds a Docker image, test it and push it to 
+[Docker Hub](https://hub.docker.com/r/patrickbaber/website/). Afterwards the Docker image will be pulled from a 
+Swarm manager and deployed as a service with the new Swarm Mode.
