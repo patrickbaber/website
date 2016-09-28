@@ -10,4 +10,4 @@ RUN apk add --update curl && \
     rm -rf /var/cache/apk/*
 
 # Add check to verify container state
-#HEALTHCHECK --interval=30s CMD curl --fail http://localhost/ || exit 1
+##HEALTHCHECK --interval=30s CMD curl --fail http://localhost/ || exit 1
