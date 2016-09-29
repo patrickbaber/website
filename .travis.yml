@@ -1,12 +1,9 @@
 services:
   - docker
 
-addons:
-  ssh_known_hosts: $SWARM_MANAGER
-
 script:
-  - ./build.sh
+  - ./cd/build.sh
 
 deploy:
   provider: script
-  script: ./deploy.sh
+  script: ./cd/push-to-registry.sh
