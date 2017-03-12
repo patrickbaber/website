@@ -9,3 +9,8 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
+    networks:
+      - srv-proxy
+networks:
+  srv-proxy:
+    external: true
