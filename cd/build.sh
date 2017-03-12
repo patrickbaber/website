@@ -1,9 +1,6 @@
 #!/bin/bash
 set -ev
 
-docker version
-docker-compose version
-
 echo "Building image ..."
 docker-compose -f docker-compose.build.yml build
 
