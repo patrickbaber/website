@@ -3,7 +3,7 @@ MAINTAINER Patrick Baber <patrick@p-squared.de>
 
 # Copy project files
 COPY etc/nginx /etc/nginx/conf.d
-COPY src /usr/share/nginx/html
+COPY src /var/www
 
 # Install curl
 RUN apk add --update \
