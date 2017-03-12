@@ -6,7 +6,9 @@ COPY etc/nginx /etc/nginx/conf.d
 COPY src /usr/share/nginx/html
 
 # Install curl
-RUN apk add --update curl && \
+RUN apk add --update \
+    curl \
+    && \
     rm -rf /var/cache/apk/*
 
 # Add check to verify container state

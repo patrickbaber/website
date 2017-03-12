@@ -1,18 +1,17 @@
 #!/bin/bash
 set -ev
 
-if [ -z "$TRAVIS_BUILD_NUMBER" ]; then
-    export TRAVIS_BUILD_NUMBER=local
-fi
+echo "Building image ..."
+docker-compose -f docker-compose.build.yml build
 
-echo "Building and running image ..."
-docker build \
--t patrickbaber/website:build-$TRAVIS_BUILD_NUMBER \
--t patrickbaber/website:latest .
-docker run -d -P --name mywebsite patrickbaber/website:build-$TRAVIS_BUILD_NUMBER
-
-echo "Checking if container is running ..."
-docker ps | grep mywebsite
+echo "Running container ..."
+docker-compose -f docker-compose.build.yml up -d
 
 echo "Checking nginx config syntax ..."
-docker exec mywebsite nginx -t
+docker-compose -f docker-compose.build.yml exec -T webserver nginx -t
+
+echo "Checking website content ..."
+docker-compose -f docker-compose.build.yml exec -T webserver curl --fail http://localhost/ | grep "Patrick Baber"
+
+echo "Stopping container ..."
+docker-compose -f docker-compose.build.yml stop

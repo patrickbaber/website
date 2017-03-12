@@ -6,4 +6,4 @@ script:
 
 deploy:
   provider: script
-  script: ./cd/push-to-registry.sh
+  script: ./cd/deploy.sh

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  webserver:
+    image: patrickbaber/website:latest
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
