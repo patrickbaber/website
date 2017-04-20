@@ -44,6 +44,7 @@ body {
 .footer address {
     font-style: normal;
     text-align: center;
+    font-weight: 200;
 }
 .social {
     padding: 4rem 0 0;
@@ -102,7 +103,7 @@ h1 {
 }
 h2 {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1.1;
 }
 strong {
