@@ -10,7 +10,7 @@ URL: http://www.patrickbaber.de
 ## Overview
 
 A `git push` to this GitHub repository triggers [Travis CI](https://travis-ci.org/patrickbaber/website) to clone the 
-repository. The CI/CD machine builds a Docker image, test it and push it to 
-[Docker Hub](https://hub.docker.com/r/patrickbaber/website/). Afterwards a Webhook triggers a Jenkins job via the 
+repository. The CI/CD machine builds a Docker image, tests it and pushs it to 
+[Docker Hub](https://hub.docker.com/r/patrickbaber/website/). Afterwards a webhook triggers a Jenkins job via the 
 [Docker Hub Notification plugin](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Hub+Notification). This 
 job deploys the new version of the Docker image with a Docker Swarm manager.
