@@ -1,6 +1,9 @@
 #!/bin/bash
 set -ev
 
+echo "Tagging image for production ..."
+docker tag patrickbaber/website:build patrickbaber/website:latest
+
 echo "Logging into Docker Hub ..."
 docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD
 

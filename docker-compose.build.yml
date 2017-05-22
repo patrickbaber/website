@@ -1,6 +1,6 @@
 version: "2"
 services:
   webserver:
-    image: patrickbaber/website:latest
+    image: patrickbaber/website:build
     build:
       context: .
