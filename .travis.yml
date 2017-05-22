@@ -4,6 +4,8 @@ services:
 jobs:
   include:
     - stage: Build
-      script: ./travis/build.sh
+      script: ./travis/00_build.sh
+    - stage: Test
+      script: ./travis/10_build.sh
     - stage: Deploy
-      script: ./travis/deploy.sh
+      script: ./travis/20_deploy.sh
