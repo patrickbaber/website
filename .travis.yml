@@ -2,8 +2,8 @@ services:
   - docker
 
 script:
-  - ./cd/build.sh
+  - ./travis/build.sh
 
 deploy:
   provider: script
-  script: ./cd/deploy.sh
+  script: ./travis/deploy.sh
