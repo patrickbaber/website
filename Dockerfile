@@ -15,12 +15,12 @@ COPY src /var/www
 WORKDIR /var/www
 
 # Build arguments
-ARG COMMIT=no-commit-set
-ARG BUILD=no-build-set
+#ARG COMMIT=no-commit-set
+#ARG BUILD=no-build-set
 
 # Set Meta Informations
-RUN sed -i "s/build-empty/$BUILD/g" index.html && \
-    sed -i "s/commit-empty/$COMMIT/g" index.html
+#RUN sed -i "s/build-empty/$BUILD/g" index.html && \
+#    sed -i "s/commit-empty/$COMMIT/g" index.html
 
 # Add check to verify container state
 ##HEALTHCHECK --interval=30s CMD curl --fail http://localhost/ || exit 1
