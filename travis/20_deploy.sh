@@ -1,6 +1,9 @@
 #!/bin/bash
 set -ev
 
+echo "Pulling image from build stage ..."
+docker-compose -f docker-compose.build.yml pull
+
 echo "Tagging image for production ..."
 docker tag patrickbaber/website:build patrickbaber/website:latest
 
