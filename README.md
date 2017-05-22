@@ -2,8 +2,8 @@
 
 # My Own Website
 
-Just my own website. Build with Docker. Delivered with [Travis CI](https://travis-ci.org/patrickbaber/website) and 
-[Docker Hub](https://hub.docker.com/r/patrickbaber/website/). Deployed in production with Jenkins and Docker Swarm Mode.
+Just my own website: Build with Docker, delivered with [Travis CI](https://travis-ci.org/patrickbaber/website) and 
+[Docker Hub](https://hub.docker.com/r/patrickbaber/website/), deployed in production with Jenkins and Docker Swarm Mode.
 
 URL: http://www.patrickbaber.de
 
