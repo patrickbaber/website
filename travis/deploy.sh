@@ -11,4 +11,4 @@ echo "Logging out from Docker Hub"
 docker logout
 
 #echo "Deploying Stack ..."
-#docker stack deploy -c docker-compose.production.yml patrickbaber-website
+#docker stack deploy -c docker-compose.production.yml patrickbaber_website

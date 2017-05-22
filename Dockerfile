@@ -1,5 +1,5 @@
-FROM nginx:1.11-alpine
-MAINTAINER Patrick Baber <patrick@p-squared.de>
+FROM nginx:1.13-alpine
+LABEL maintainer "mail@patrickbaber.de"
 
 # Copy project files
 COPY etc/nginx /etc/nginx/conf.d
