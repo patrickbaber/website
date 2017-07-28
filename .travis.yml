@@ -8,4 +8,4 @@ jobs:
     - stage: Test
       script: ./travis/10_test.sh
     - stage: Deploy
-      script: ./travis/20_deploy.sh
+      script: ./travis/20_registry.sh
