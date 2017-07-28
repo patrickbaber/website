@@ -9,6 +9,12 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
+      labels:
+        traefik.enable: "true"
+        traefik.port: 80
+        traefik.frontend.rule: "Host:patrickbaber.de,www.patrickbaber.de"
+        traefik.frontend.entryPoints: "http,https"
+        traefik.docker.network: "srv-proxy"
     networks:
       - srv-proxy
 networks:
