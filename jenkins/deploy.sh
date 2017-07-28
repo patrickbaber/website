@@ -3,8 +3,6 @@ set -e
 
 echo "Creating directory ..."
 ssh -o StrictHostKeyChecking=no $PROD_USER@$PROD_HOST << CODE
-    docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_HOST
-
     if [ ! -d "$PROD_PATH" ]; then
         echo "Creating target directory ..."
         mkdir -p $PROD_PATH
@@ -16,8 +14,6 @@ scp -o StrictHostKeyChecking=no "docker-compose.production.yml" $PROD_USER@$PROD
 
 echo "Running command on remote server ..."
 ssh -o StrictHostKeyChecking=no $PROD_USER@$PROD_HOST << CODE
-    docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_HOST
-
     echo "Deploying stack ..."
     cd $PROD_PATH
     docker stack deploy -c docker-compose.production.yml --with-registry-auth $PROD_STACK
