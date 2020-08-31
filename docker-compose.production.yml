@@ -1,4 +1,10 @@
-version: "3"
+version: "3.7"
+
+x-resources: &resources
+  resources:
+    limits:
+      cpus: "1.5"
+      memory: 512M
 
 services:
   webserver:
@@ -16,6 +22,7 @@ services:
         traefik.frontend.rule: "Host:patrickbaber.de,www.patrickbaber.de"
         traefik.frontend.entryPoints: "http,https"
         traefik.docker.network: "srv-proxy"
+      <<: *resources
     networks:
       - srv-proxy
 
